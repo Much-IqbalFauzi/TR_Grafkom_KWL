@@ -138,7 +138,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="boxcall.cpp" />
+    <ClCompile Include="key_keyboard.cpp" />
+    <ClCompile Include="kwlBody_atas.cpp" />
+    <ClCompile Include="kwlBody_belakang.cpp" />
+    <ClCompile Include="kwlBody_depan.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mouseAct.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boxcall.h" />
+    <ClInclude Include="key_keyboard.h" />
+    <ClInclude Include="mouseAct.h" />
+    <ClInclude Include="vehicle_part.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,20 +1,40 @@
 #include <GL/glut.h>
 #include <windows.h>
 #include <iostream>
+#include "boxcall.h"
+#include "mouseAct.h"
+#include "vehicle_part.h"
+#include "key_keyboard.h"
 using namespace std;
-float xrot = 0;
-float yrot = 0;
-float xdiff = 0;
-float ydiff = 0;
-bool mousedown = false;
 
-void Warna(int r = 1, int g = 1, int b = 1, float a = 1) {
-    glColor4f(r / 255.0f, g / 255.0f, b / 255.0f, a);
+class Vehicle {
+public:
+    void body() {
+        init_kwlBody_atas();
+        init_kwlBody_depan();
+        init_kwlBody_belakang();
+    }
+
+    void movements() {
+
+    }
+};
+
+Vehicle Vv;
+
+void show(){
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glPushMatrix();
+    gluLookAt(60, 20, 250, 0, 0, 0, 0, 1, 0);
+    mouseActive();
+
+    Vv.body();
+    
+    glPopMatrix();
+
+    glutSwapBuffers();
 }
-
-/*
-    CODE HERE
-*/
 
 void myInit() {
     glClearColor((float)77 / 255.0f, (float)72 / 255.0f, (float)63 / 255.0f, 1);
@@ -27,7 +47,7 @@ void myInit() {
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 }
 
-void aspRR(GLsizei width, GLsizei height) {
+void Resize_aspRR(GLsizei width, GLsizei height) {
     if (height == 0) height = 1;
     GLfloat aspect = (GLfloat)width / (GLfloat)height;
     glViewport(0, 0, width, height);
@@ -36,30 +56,7 @@ void aspRR(GLsizei width, GLsizei height) {
     gluPerspective(45.0f, aspect, 0.1f, -100.0f);
 }
 
-void mouseButton(int button, int state, int x, int y) {
-    if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
-        mousedown = true;
-        xdiff = x - yrot;
-        ydiff = -y + xrot;
-    }
-    else {
-        mousedown = false;
-    }
-    glutPostRedisplay();
-}
 
-void mouseMove(int x, int y) {
-    if (mousedown) {
-        yrot = x - xdiff;
-        xrot = y + ydiff;
-
-        glutPostRedisplay();
-    }
-}
-
-void key(unsigned char key, int x, int y) {
-
-}
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
@@ -67,10 +64,10 @@ int main(int argc, char** argv) {
     glutInitWindowSize(1000, 600);
     glutInitWindowPosition(133, 54);
 
-    glutCreateWindow("Muchamad Iqbal Fauzi - 672018382");
+    glutCreateWindow("Grafkom_Komatsu Wheel Loader");
     myInit();
-    glutReshapeFunc(aspRR);
-    //glutDisplayFunc(show);
+    glutReshapeFunc(Resize_aspRR);
+    glutDisplayFunc(show);
     glutKeyboardFunc(key);
     glutMouseFunc(mouseButton);
     glutMotionFunc(mouseMove);
