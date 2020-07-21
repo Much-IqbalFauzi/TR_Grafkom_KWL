@@ -34,3 +34,12 @@ void box_topBottom(int panjang = 1, int lebar = 1, int p_x = 0, int p_y = 0, int
     glVertex3d(0 + p_x, 0 + p_y, (-1 * lebar) + p_z);
     glEnd();
 }
+
+void box_miringKK(int x_1 = -1, int x_2 = 1, int y_1 = -1, int y_2 = 1, int z_1 = -1, int z_2 = 1) {
+    glBegin(GL_QUADS);
+    glVertex3d(x_1, y_1, z_1);
+    glVertex3d(x_2, y_2, z_1);
+    glVertex3d(x_2, y_2, z_2);
+    glVertex3d(x_1, y_1, z_2);
+    glEnd();
+}

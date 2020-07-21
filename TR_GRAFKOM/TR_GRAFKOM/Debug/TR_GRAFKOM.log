@@ -1,8 +1,2 @@
-﻿  key_keyboard.cpp
-  kwlBody_atas.cpp
-  kwlBody_belakang.cpp
-  kwlBody_depan.cpp
-  main.cpp
-  mouseAct.cpp
-  Generating Code...
+﻿  mouseAct.cpp
   TR_GRAFKOM.vcxproj -> C:\Users\Much. Iqbal Fauzi\Documents\C++\Grafkom\TR_Gann\TR_Grafkom_KWL\TR_GRAFKOM\Debug\TR_GRAFKOM.exe

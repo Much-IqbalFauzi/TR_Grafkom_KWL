@@ -10,8 +10,8 @@ using namespace std;
 class Vehicle {
 public:
     void body() {
-        init_kwlBody_atas();
-        init_kwlBody_depan();
+        //init_kwlBody_atas();
+        //init_kwlBody_depan();
         init_kwlBody_belakang();
     }
 
@@ -24,9 +24,12 @@ Vehicle Vv;
 
 void show(){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
     glPushMatrix();
-    gluLookAt(60, 20, 250, 0, 0, 0, 0, 1, 0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    lightOn();
+    glMatrixMode(GL_PROJECTION);
+    gluLookAt(60, 20, 350, 0, 0, 0, 0, 1, 0);
     mouseActive();
 
     Vv.body();
@@ -41,6 +44,10 @@ void myInit() {
     glClearDepth(1.0f);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_NORMALIZE);
+    glEnable(GL_COLOR_MATERIAL);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glDepthFunc(GL_LEQUAL);
     glShadeModel(GL_SMOOTH);
@@ -60,7 +67,7 @@ void Resize_aspRR(GLsizei width, GLsizei height) {
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(1000, 600);
     glutInitWindowPosition(133, 54);
 
