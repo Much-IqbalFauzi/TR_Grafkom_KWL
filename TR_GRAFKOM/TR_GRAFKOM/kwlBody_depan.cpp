@@ -86,6 +86,13 @@ void init_kwlBody_depan() {
 	glVertex3d((koor_x + (panjang / 3)), (koor_y + tinggi), koor_z);
 	glVertex3d(koor_x + panjang, koor_y, koor_z);
 	glEnd();
+	
+	glBegin(GL_POLYGON);
+	glVertex3d(koor_x + panjang, koor_y, (koor_z + lebar));
+	glVertex3d((koor_x + (panjang / 3)), koor_y, (koor_z + lebar));
+	glVertex3d((koor_x + (panjang / 3)), (koor_y + tinggi), (koor_z + lebar));
+	glEnd();
+
 
 	Warna(135, 133, 116);
 	glBegin(GL_POLYGON);
@@ -95,20 +102,19 @@ void init_kwlBody_depan() {
 	glVertex3d(koor_x + panjang, koor_y, koor_z + lebar);
 	glEnd();
 
-	glBegin(GL_POLYGON);
-	glVertex3d(koor_x + panjang, koor_y, (koor_z + lebar));
-	glVertex3d((koor_x + (panjang / 3)), koor_y, (koor_z+lebar));
-	glVertex3d((koor_x + (panjang / 3)), (koor_y + tinggi), (koor_z + lebar));
-	glEnd();
 
 	//selebor
 	selebor(koor_x, koor_y, koor_z-(2*lebar), panjang, lebar, tinggi);
 	selebor(koor_x, koor_y, koor_z, panjang, lebar, tinggi);
 	selebor(45, koor_y, koor_z - (2 * lebar), panjang, lebar, tinggi);
 	selebor(45, koor_y, koor_z, panjang, lebar, tinggi);
+	ban(5, 140, koor_x + (panjang / 1.8), koor_y, -(koor_z + lebar * 1.25 + 30));
+	ban(5, 2, koor_x + (panjang / 1.8), koor_y, (koor_z + lebar * 1.25 + 35));
 
-
+	ban(5, 140, 100, koor_y, -(koor_z + lebar * 1.25 + 30));
+	ban(5, 2, 100, koor_y, (koor_z + lebar * 1.25 + 35));
 	//tutup
+	Warna(135, 133, 116);
 	box_topBottom(panjang / 3, lebar, koor_x, koor_y + tinggi, koor_z + lebar);
 	Warna(123, 123, 123);
 	box_topBottom(panjang, lebar, koor_x, koor_y , koor_z + lebar);
