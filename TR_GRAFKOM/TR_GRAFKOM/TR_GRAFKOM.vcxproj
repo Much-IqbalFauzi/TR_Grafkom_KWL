@@ -143,6 +143,7 @@
     <ClCompile Include="kwlBody_atas.cpp" />
     <ClCompile Include="kwlBody_belakang.cpp" />
     <ClCompile Include="kwlBody_depan.cpp" />
+    <ClCompile Include="latar_tempat.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mouseAct.cpp" />
   </ItemGroup>

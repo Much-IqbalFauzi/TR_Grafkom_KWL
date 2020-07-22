@@ -9,3 +9,5 @@ void box_sides(int lebar = 1, int tinggi = 1, int p_x = 0, int p_y = 0, int p_z 
 void box_topBottom(int panjang = 1, int lebar = 1, int p_x = 0, int p_y = 0, int p_z = 0);
 
 void box_miringKK(int x_1 = -1, int x_2 = 1, int y_1 = -1, int y_2 = 1, int z_1 = -1, int z_2 = 1);
+
+void ban(int jari2, int lebar_ban, int x_tengah, int y_tengah, int z_tengah);
