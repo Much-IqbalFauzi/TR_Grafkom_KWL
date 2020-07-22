@@ -8,19 +8,37 @@
 using namespace std;
 
 class Vehicle {
-public:
-    void body() {
-        //init_kwlBody_atas();
-        //init_kwlBody_depan();
-        init_kwlBody_belakang();
-    }
+    public:
+        void body() {
+            init_kwlBody_atas();
+            init_kwlBody_depan();
+            init_kwlBody_belakang();
+        }
 
-    void movements() {
+        void movements() {
 
-    }
+        }
+
+        void setPistonAct(int itr) {
+            pistonAct = itr;
+        }
+
+        int getPistonAct() {
+            return pistonAct;
+        }
+    private:
+        int pistonAct;
 };
 
 Vehicle Vv;
+
+class VehicleKawai : public Vehicle {
+    public:
+
+        
+};
+
+
 
 void show(){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
