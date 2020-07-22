@@ -11,9 +11,11 @@ class Vehicle {
     public:
         void body() {
            
-        //init_kwlBody_atas();
+        init_kwlBody_atas();
         init_kwlBody_depan();
         init_kwlBody_belakang();
+
+        latarTempat();
         }
 
         void movements() {
