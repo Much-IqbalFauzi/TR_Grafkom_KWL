@@ -41,8 +41,8 @@ void init_kwlBody_atas() {
 	glRotatef(180, 0, 1, 0);
 
 	//koco
-	Warna(0, 30, 50);
-	box_miringKK(koor_x +2, koor_x -17, koor_y + 25, koor_y + 80, koor_z - 17, koor_z + 37);
+	Warna(0, 30, 50, 0.1);
+
 
 	glBegin(GL_POLYGON);
 	glVertex3d(koor_x - 11, koor_y + 30, koor_z - 25);
@@ -60,6 +60,9 @@ void init_kwlBody_atas() {
 	box_sides(lebar , tinggi - 80, koor_x - (panjang / 2) - 30, koor_y + 55, koor_z +lebar-15);
 	//Pintu
 	box_frontBack(30, 75, koor_x - 70, koor_y + 5, koor_z - 25);
+
+	Warna(0, 30, 50, 0.2);
+	box_miringKK(koor_x + 2, koor_x - 17, koor_y + 25, koor_y + 80, koor_z - 17, koor_z + 37);
 
 
 	//jendela

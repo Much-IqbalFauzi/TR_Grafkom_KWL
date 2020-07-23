@@ -30,20 +30,26 @@ void kubus(float px, float py, float pz,float x2, float y2, float z2) {
 
 }
 
-void latarTempat() {
-<<<<<<< HEAD
+void kerucut(int jari2, int tinggi, int x_tengah, int y_tengah, int z_tengah) {
+	float PI = 3.14;
+	glBegin(GL_POLYGON);
+	float y = y_tengah;
+	for (int j = 0; j <= tinggi; j++) {
+		for (int i = 0; i <= 360; i++) {
+			float sudut = i * (2 * PI / 360);
+			float x = x_tengah + jari2 * cos(sudut);
+			float z = z_tengah + jari2 * sin(sudut);
+			glVertex3f(x, y, z);
+			}
+		jari2 -= 1;
+		y += 1;
+	}
+		glEnd();
 	
-	box_topBottom(1000,-1000,-500,-40,-500);
-	box_topBottom(1000,-1000,-500,-50,-500);
-	box_frontBack(1000,10,-500,-50,-500);
-	box_frontBack(1000,10,-500,-50,500);
-	box_sides(-1000,10,-500,-50,-500);
-	box_sides(-1000,10,500,-50,-500);
-
-
-
 }
-=======
+
+void latarTempat() {
+
 	float panjang = 2000;
 	box_topBottom(panjang,-panjang,-panjang/2,-40,-panjang/2);
 	box_topBottom(panjang,-panjang,-panjang/2,-50,-panjang/2);
@@ -55,7 +61,7 @@ void latarTempat() {
 	pasir(1000, 900, 80, -800, -40, -700);
 	pasir(800, 900, 150, -1100, -40, -300);
 	
-	
+	kerucut(400, 300, -800, -40, 200);
 	// rest box
 	float panjang1 = 200, lebar1 = 400, tinggi1 = 150, x1 = 800, y1 = -50, z1 = 500;
 	Warna(255, 255, 255);
@@ -83,4 +89,3 @@ void latarTempat() {
 	kubus(32, 5, -32, 750, -10, 319);
 
 	}
->>>>>>> 03a8f25088c2b5694062342fe287feeec3202234
