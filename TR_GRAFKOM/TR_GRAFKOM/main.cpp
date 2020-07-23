@@ -10,16 +10,16 @@ using namespace std;
 class Vehicle {
     public:
         void body() {
-           
-        init_kwlBody_atas();
-        init_kwlBody_depan();
-        init_kwlBody_belakang();
+            init_kwlBody_atas();
+            init_kwlBody_depan();
+            init_kwlBody_belakang();
 
-        latarTempat();
+            latarTempat();
+            
         }
 
         void movements() {
-
+            ciduk_move();
         }
 
         void setPistonAct(int itr) {
@@ -41,21 +41,21 @@ class VehicleKawai : public Vehicle {
         
 };
 
-
-
 void show(){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
     glPushMatrix();
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     lightOn();
     glMatrixMode(GL_PROJECTION);
-    gluLookAt(60, 20, 350, 0, 0, 0, 0, 1, 0);
+    gluLookAt(80, 100, 350, 0, 0, 0, 0, 1, 0);
     mouseActive();
 
     Vv.body();
-    
+    Vv.movements();
     glPopMatrix();
+    //=============================
 
     glutSwapBuffers();
 }

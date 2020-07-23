@@ -139,6 +139,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="boxcall.cpp" />
+    <ClCompile Include="cidukLemah.cpp" />
     <ClCompile Include="key_keyboard.cpp" />
     <ClCompile Include="kwlBody_atas.cpp" />
     <ClCompile Include="kwlBody_belakang.cpp" />
