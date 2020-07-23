@@ -40,7 +40,26 @@ void init_kwlBody_atas() {
 	glTranslated(10, 25, 15);
 	glRotatef(180, 0, 1, 0);
 
+	//koco
+	Warna(0, 30, 50);
+	box_miringKK(koor_x +2, koor_x -17, koor_y + 25, koor_y + 80, koor_z - 17, koor_z + 37);
 
+	glBegin(GL_POLYGON);
+	glVertex3d(koor_x - 11, koor_y + 30, koor_z - 25);
+	glVertex3d(koor_x - 24, koor_y + 70, koor_z - 25);
+	glVertex3d(koor_x - 35, koor_y + 70, koor_z - 25);
+	glVertex3d(koor_x - 35, koor_y + 30, koor_z - 25);
+	glEnd();
+	glBegin(GL_POLYGON);
+	glVertex3d(koor_x - 11, koor_y + 30, koor_z +lebar-5);
+	glVertex3d(koor_x - 24, koor_y + 70, koor_z + lebar - 5);
+	glVertex3d(koor_x - 35, koor_y + 70, koor_z + lebar - 5);
+	glVertex3d(koor_x - 35, koor_y + 30, koor_z + lebar - 5);
+	glEnd();
+	box_frontBack(30, 40, koor_x - 70, koor_y + 40, koor_z +lebar-5);
+	box_sides(lebar , tinggi - 80, koor_x - (panjang / 2) - 30, koor_y + 55, koor_z +lebar-15);
+	//Pintu
+	box_frontBack(30, 75, koor_x - 70, koor_y + 5, koor_z - 25);
 
 
 	//jendela
@@ -119,7 +138,7 @@ void init_kwlBody_atas() {
 	glVertex3d(koor_x - 11, koor_y + 30, koor_z +lebar-5);
 	glEnd();
 
-	//kaca Depan
+	//frame kaca Depan
 	box_miringKK(koor_x + 10, koor_x - 20, koor_y + 5, koor_y + panjang-10, koor_z + lebar-5, koor_z + lebar-14);
 	box_miringKK(koor_x + 10, koor_x - 20, koor_y + 5, koor_y + panjang - 10, koor_z-25 , koor_z -17);
 	box_miringKK(koor_x + 10, koor_x+2 , koor_y + 5, koor_y + 25, koor_z - 20, koor_z + 40);

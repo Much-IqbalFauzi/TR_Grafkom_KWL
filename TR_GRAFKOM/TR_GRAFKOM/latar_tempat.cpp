@@ -11,4 +11,7 @@ void latarTempat() {
 	box_frontBack(1000,10,-500,-50,500);
 	box_sides(-1000,10,-500,-50,-500);
 	box_sides(-1000,10,500,-50,-500);
+
+
+
 }
