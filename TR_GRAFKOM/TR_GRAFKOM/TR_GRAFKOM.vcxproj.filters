@@ -39,6 +39,9 @@
     <ClCompile Include="latar_tempat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cidukLemah.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boxcall.h">
