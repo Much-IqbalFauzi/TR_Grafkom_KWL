@@ -1,7 +1,58 @@
-<<<<<<< HEAD
-﻿  kwlBody_atas.cpp
-  TR_GRAFKOM.vcxproj -> D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\Debug\TR_GRAFKOM.exe
-=======
-﻿  latar_tempat.cpp
-  TR_GRAFKOM.vcxproj -> D:\Kuliah\Tugas\grafkom\TR_grafkom\TR_Grafkom_KWL\TR_GRAFKOM\Debug\TR_GRAFKOM.exe
->>>>>>> 03a8f25088c2b5694062342fe287feeec3202234
+﻿  boxcall.cpp
+  cidukLemah.cpp
+  key_keyboard.cpp
+  kwlBody_atas.cpp
+  kwlBody_belakang.cpp
+  kwlBody_depan.cpp
+  latar_tempat.cpp
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(25,1): error C2059: syntax error: '<<'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(37,1): error C2059: syntax error: '=='
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(39,16): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(39,25): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(39,34): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(39,49): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(39,58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(39,2): error C2365: 'box_topBottom': redefinition; previous definition was 'function'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\boxcall.h(9): message : see declaration of 'box_topBottom'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(40,16): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(40,25): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(40,34): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(40,49): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(40,58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(40,2): error C2365: 'box_topBottom': redefinition; previous definition was 'function'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\boxcall.h(9): message : see declaration of 'box_topBottom'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(41,16): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(41,28): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(41,43): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(41,52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(41,2): error C2365: 'box_frontBack': redefinition; previous definition was 'function'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\boxcall.h(5): message : see declaration of 'box_frontBack'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(42,16): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(42,28): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(42,42): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(42,51): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(42,2): error C2365: 'box_frontBack': redefinition; previous definition was 'function'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\boxcall.h(5): message : see declaration of 'box_frontBack'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(43,13): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(43,25): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(43,40): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(43,49): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(43,2): error C2365: 'box_sides': redefinition; previous definition was 'function'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\boxcall.h(7): message : see declaration of 'box_sides'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(44,13): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(44,24): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(44,39): error C2065: 'panjang': undeclared identifier
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(44,48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(44,2): error C2365: 'box_sides': redefinition; previous definition was 'function'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\boxcall.h(7): message : see declaration of 'box_sides'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(46,38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(46,2): error C2365: 'pasir': redefinition; previous definition was 'function'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(6): message : see declaration of 'pasir'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(47,39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(47,2): error C2365: 'pasir': redefinition; previous definition was 'function'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(6): message : see declaration of 'pasir'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(49,2): error C2059: syntax error: '}'
+D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\TR_GRAFKOM\latar_tempat.cpp(49,2): error C2143: syntax error: missing ';' before '}'
+  main.cpp
+  mouseAct.cpp
+  Generating Code...
