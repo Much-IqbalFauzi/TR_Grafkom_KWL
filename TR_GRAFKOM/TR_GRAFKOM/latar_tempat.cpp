@@ -87,7 +87,7 @@ void alat_pasir() {
 	glVertex3d(xi - pi * 2.5, yi + 2 * ti + 500, zi - li);
 	glVertex3d(xi - pi * 2.5, yi + 500 + 1.2 * ti, zi - li);
 	glEnd();
-	glRotated(-90, 0, -500, 0);
+	glRotated(-90, 0, 500, 0);
 	glTranslated(1200, 0, 920);
 }
 
@@ -103,6 +103,16 @@ void batang(int jari2, int tinggi, int x_tengah, int y_tengah, int z_tengah) {
 				glVertex3d(x, y + tinggi,z);
 			}
 		glEnd();
+}
+
+void pohon(float rb = 20,float tb = 300,float xp = 600,float yp = -40,float zp = 600) {
+	batang(rb, tb, xp, yp, zp);
+	Warna(0, 150);
+	kerucut(rb * 5, tb / 3, xp, yp + tb / 4, zp);
+	kerucut(rb * 5, tb / 3, xp, yp + tb / 4 + tb / 4, zp);
+	kerucut(rb * 5, tb / 3, xp, yp + tb / 4 + 2 * (tb / 4), zp);
+	xp += 100;
+	zp += 100;
 }
 
 void latarTempat() {
@@ -145,13 +155,9 @@ void latarTempat() {
 	kubus(5, 35, 5, 750, -40, 320);
 	kubus(32, 5, -32, 750, -10, 319);
 
-	batang(20,300,200,-40,400);
-	Warna(0, 150);
-	kerucut(100, 100, 200, 80, 400);
-	kerucut(100, 100, 200, 130, 400);
-	kerucut(100, 100, 200, 180, 400);
+	pohon();
+	pohon(20, 300, 600, -40, 800);
 
 	//sing koyo nak ning tambang pasir
-	//iki sing marakke error cakruk muser
 	alat_pasir();
 }
