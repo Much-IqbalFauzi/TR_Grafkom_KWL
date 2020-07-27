@@ -115,6 +115,69 @@ void pohon(float rb = 20,float tb = 300,float xp = 600,float yp = -40,float zp =
 	zp += 100;
 }
 
+
+void kayu2() {
+	float p = 300, l = 20, x = 600, y = -40, z=-200;
+
+	Warna(84, 45, 9);
+	box_frontBack(l, l, x , y, z - p);
+	box_topBottom(l, p, x, y+1, z);
+	box_topBottom(l, p, x, y + l, z);
+	box_sides(p, l, x, y, z);
+	Warna(63, 34, 7);
+	box_sides(p, l, x + l, y, z);
+	box_frontBack(l, l, x, y, z);
+
+	
+	box_frontBack(l, l, x+5+l, y, z);
+	box_sides(p, l, x + 5 + l, y, z);
+	box_topBottom(l, p, x + 5 + l, y + 1, z);
+	box_topBottom(l, p, x + 5 + l, y + l, z);
+	box_sides(p, l, x + 5 + l + l, y, z);
+	Warna(84, 45, 9);
+	box_frontBack(l, l, x + 5 + l, y, z - p);
+
+
+	
+	Warna(63, 34, 7);
+	box_topBottom(l, p, x  + l + l + 10, y + 1, z);
+	box_sides(p, l, x + l + l + 10, y, z);
+	box_frontBack(l, l, x + l + l + 10, y, z);
+	Warna(84, 45, 9);
+	box_topBottom(l, p, x + l + l + 10, y + l, z);
+	box_sides(p, l, x + l + l + 10 + l, y, z);
+	box_frontBack(l, l, x + l + l + 10, y, z - p);
+
+	Warna(90, 49, 11);
+	box_frontBack(l, l, x + 13, y + l, z - p);
+	box_sides(p, l, x + 13, y+l, z);
+	box_topBottom(l, p, x + 13, y + l + l, z);
+	Warna(63, 34, 7);
+	box_topBottom(l, p, x + 13, y + l, z);
+	box_sides(p, l, x + 13+l, y + l, z);
+	box_frontBack(l, l, x + 13, y + l, z);
+	
+	box_frontBack(l, l, x + 18+l, y + l, z);
+	box_sides(p, l, x + 18 + l, y + l, z);
+	box_topBottom(l, p, x + 18 + l, y + l, z);
+	Warna(90, 49, 11);
+	box_topBottom(l, p, x + 18 + l, y + l + l, z);
+	box_sides(p, l, x + 18 + l + l, y + l, z);
+	box_frontBack(l, l, x + 18 + l, y + l, z - p);
+	
+	Warna(96, 50, 9);
+	box_sides(p, l, x + 5 + l+l, y + (l * 2), z);
+	box_sides(p, l, x + 5 + l, y + (l * 2), z);
+	box_topBottom(l, p, x + 5 + l, y + l + (l * 2), z);
+	box_frontBack(l, l, x + 5 + l, y + (l * 2), z - p);
+	Warna(63, 34, 7);
+	box_frontBack(l, l, x + 5 + l, y + (l * 2), z);
+	box_topBottom(l, p, x + 5 + l, y + (l * 2), z);
+
+	}
+
+
+
 void latarTempat() {
 
 	float panjang = 2200;
@@ -160,4 +223,5 @@ void latarTempat() {
 
 	//sing koyo nak ning tambang pasir
 	alat_pasir();
+	kayu2();
 }
