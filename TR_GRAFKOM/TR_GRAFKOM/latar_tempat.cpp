@@ -48,9 +48,76 @@ void kerucut(int jari2, int tinggi, int x_tengah, int y_tengah, int z_tengah) {
 	
 }
 
+void alat_pasir() {
+	float xi = -150, yi = -20, zi = 400, pi = 300, li = 50, ti = 40;
+	glTranslated(-1200, 0, -920);
+	glRotated(90, 0, 500, 0);
+	kubus(pi, li, ti, xi, yi, zi);
+
+	Warna();
+	ban(22, 20, xi, yi, zi);
+	ban(22, 20, xi + pi, yi, zi);
+	ban(22, 20, xi + pi, yi, zi - li * 1.2);
+	ban(22, 20, xi, yi, zi - li * 1.2);
+	ban(5, -52, xi, yi, zi + 1);
+	ban(5, -52, xi + pi, yi, zi + 1);
+
+	Warna(150, 150, 150);
+	ban(20, 24, xi + pi, yi, zi + 1);
+	ban(20, 24, xi + pi, yi, zi - li * 1.2 - 1);
+	ban(20, 22, xi, yi, zi - li * 1.2 - 2);
+	ban(20, 22, xi, yi, zi + 1);
+
+	box_miringKK(xi + pi, xi - pi * 2.5, yi + 1.2 * ti, yi + 500 + 1.2 * ti, zi, zi - li);
+	box_miringKK(xi + pi, xi - pi * 2.5, yi + 2 * ti, yi + 2 * ti + 500, zi, zi - li);
+	
+
+	Warna();
+	box_miringKK(xi, xi - pi * 1.5, yi + 1.2 * ti, yi + 400, zi, zi - li);
+	glBegin(GL_POLYGON);
+	glVertex3d(xi + pi, yi + 1.2 * ti, zi);
+	glVertex3d(xi + pi, yi + 2 * ti, zi);
+	glVertex3d(xi - pi * 2.5, yi + 2 * ti + 500, zi);
+	glVertex3d(xi - pi * 2.5, yi + 500 + 1.2 * ti, zi);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3d(xi + pi, yi + 1.2 * ti, zi - li);
+	glVertex3d(xi + pi, yi + 2 * ti, zi - li);
+	glVertex3d(xi - pi * 2.5, yi + 2 * ti + 500, zi - li);
+	glVertex3d(xi - pi * 2.5, yi + 500 + 1.2 * ti, zi - li);
+	glEnd();
+	glRotated(-90, 0, 500, 0);
+	glTranslated(1200, 0, 920);
+}
+
+void batang(int jari2, int tinggi, int x_tengah, int y_tengah, int z_tengah) {
+		float PI = 3.14;
+		glBegin(GL_POLYGON);
+		float y = y_tengah;
+			for (int i = 0; i <= 360; i++) {
+				float sudut = i * (2 * PI / 360);
+				float x = x_tengah + jari2 * cos(sudut);
+				float z = z_tengah + jari2 * sin(sudut);
+				glVertex3f(x, y, z);
+				glVertex3d(x, y + tinggi,z);
+			}
+		glEnd();
+}
+
+void pohon(float rb = 20,float tb = 300,float xp = 600,float yp = -40,float zp = 600) {
+	batang(rb, tb, xp, yp, zp);
+	Warna(0, 150);
+	kerucut(rb * 5, tb / 3, xp, yp + tb / 4, zp);
+	kerucut(rb * 5, tb / 3, xp, yp + tb / 4 + tb / 4, zp);
+	kerucut(rb * 5, tb / 3, xp, yp + tb / 4 + 2 * (tb / 4), zp);
+	xp += 100;
+	zp += 100;
+}
+
 void latarTempat() {
 
-	float panjang = 2000;
+	float panjang = 2200;
 	box_topBottom(panjang,-panjang,-panjang/2,-40,-panjang/2);
 	box_topBottom(panjang,-panjang,-panjang/2,-50,-panjang/2);
 	box_frontBack(panjang,10,-panjang/2,-50,-panjang/2);
@@ -88,4 +155,9 @@ void latarTempat() {
 	kubus(5, 35, 5, 750, -40, 320);
 	kubus(32, 5, -32, 750, -10, 319);
 
-	}
+	pohon();
+	pohon(20, 300, 600, -40, 800);
+
+	//sing koyo nak ning tambang pasir
+	alat_pasir();
+}
