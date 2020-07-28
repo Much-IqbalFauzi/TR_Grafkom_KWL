@@ -1,1 +1,12 @@
-﻿  TR_GRAFKOM.vcxproj -> D:\GRAFKOM\TR_Grafkom_KWL\TR_GRAFKOM\Debug\TR_GRAFKOM.exe
+﻿  boxcall.cpp
+  cidukLemah.cpp
+  key_keyboard.cpp
+  kwlBody_atas.cpp
+  kwlBody_belakang.cpp
+  kwlBody_depan.cpp
+  latar_tempat.cpp
+  main.cpp
+  mouseAct.cpp
+  Generating Code...
+  LINK : D:\Kuliah\Tugas\grafkom\TR_grafkom\TR_Grafkom_KWL\TR_GRAFKOM\Debug\TR_GRAFKOM.exe not found or not built by the last incremental link; performing full link
+  TR_GRAFKOM.vcxproj -> D:\Kuliah\Tugas\grafkom\TR_grafkom\TR_Grafkom_KWL\TR_GRAFKOM\Debug\TR_GRAFKOM.exe
