@@ -3,9 +3,9 @@
 #include <iostream>
 #include "boxcall.h"
 #include "key_keyboard.h"
+#include "vehicle_part.h"
 
 /*
-
 	README
 	kamera secara default sudah di
 	gluLookAt(60, 20, 250, 0, 0, 0, 0, 1, 0);
@@ -35,7 +35,8 @@
 
 */
 
-int pistonH_pos = -10;
+Vehicle v;
+int pistonH_pos = v.getPistonAct();
 
 void bokong() {
 	glBegin(GL_QUADS);

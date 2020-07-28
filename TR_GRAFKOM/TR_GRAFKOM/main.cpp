@@ -7,41 +7,8 @@
 #include "key_keyboard.h"
 using namespace std;
 
-class Vehicle {
-    public:
-        void body() {
-            init_kwlBody_atas();
-            init_kwlBody_depan();
-            init_kwlBody_belakang();
-
-            latarTempat();
-            
-        }
-
-        void movements() {
-            ciduk_move();
-        }
-
-        void setPistonAct(int itr) {
-            pistonAct = itr;
-        }
-
-        int getPistonAct() {
-            return pistonAct;
-        }
-    private:
-        int pistonAct;
-};
-
-Vehicle Vv;
-
-class VehicleKawai : public Vehicle {
-    public:
-
-        
-};
-
 void show(){
+    
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     glPushMatrix();
@@ -49,13 +16,12 @@ void show(){
     glLoadIdentity();
     lightOn();
     glMatrixMode(GL_PROJECTION);
-    gluLookAt(80, 100, 350, 0, 0, 0, 0, 1, 0);
+    gluLookAt(-730, 500, 1050, 0, 0, 0, 0, 1, 0);
     mouseActive();
 
-    Vv.body();
+    Vehicle Vv;
     Vv.movements();
     glPopMatrix();
-    //=============================
 
     glutSwapBuffers();
 }
@@ -83,8 +49,6 @@ void Resize_aspRR(GLsizei width, GLsizei height) {
     glLoadIdentity();
     gluPerspective(45.0f, aspect, 0.1f, -100.0f);
 }
-
-
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);

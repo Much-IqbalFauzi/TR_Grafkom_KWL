@@ -4,6 +4,9 @@
 #include "vehicle_part.h"
 using namespace std;
 
+Vehicle vehi;
+bool inochi = vehi.getKwl();
+
 void piston_down(int) {
     glutPostRedisplay();
     if (pistonH_pos > -40) {
@@ -48,34 +51,68 @@ void key(unsigned char key, int x, int y) {
         break;
     case 'f':
     case 'F':
-        if (pistonH_pos == -10) {
-            glutTimerFunc(0, piston_down, 0);
+        if (inochi) {
+            if (pistonH_pos == -10) {
+                glutTimerFunc(0, piston_down, 0);
+            }
+            else {
+                glutTimerFunc(0, piston_up, 0);
+            }
         } else {
-            glutTimerFunc(0, piston_up, 0);
+            cout << "mesin mati oi" << endl;
         }
         break;
     case 'z':
     case 'Z':
-        if (sudutLengan < 20) {
-            sudutLengan += 1;
+        if (inochi) {
+            if (sudutLengan < 20) {
+                sudutLengan += 1;
+            }
+        } else {
+            cout << "mesin mati oi" << endl;
         }
         break;
     case 'x':
     case 'X':
-        if (sudutLengan > -40) {
-            sudutLengan -= 1;
+        if (inochi) {
+            if (sudutLengan > -40) {
+                sudutLengan -= 1;
+            }
+        }
+        else {
+            cout << "mesin mati oi" << endl;
         }
         break;
     case 'c':
     case 'C':
-        if (sudutCiduk < 45) {
-            sudutCiduk += 1;
+        if (inochi) {
+            if (sudutCiduk < 45) {
+                sudutCiduk += 1;
+            }
+        }
+        else {
+            cout << "mesin mati oi" << endl;
         }
         break;
     case 'v':
     case 'V':
-        if (sudutCiduk > -40) {
-            sudutCiduk -= 1;
+        if (inochi) {
+            if (sudutCiduk > -40) {
+                sudutCiduk -= 1;
+            }
+        }
+        else {
+            cout << "mesin mati oi" << endl;
+        }
+        break;
+    case 'b':
+    case 'B':
+        if (inochi) {
+            inochi = false;
+            cout << "mematikan mesin" << endl;
+        } else {
+            inochi = true;
+            cout << "menghidupkan mesin" << endl;
         }
         break;
     }

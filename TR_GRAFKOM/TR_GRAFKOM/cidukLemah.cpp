@@ -1,9 +1,11 @@
 #include <GL/glut.h>
 #include <Windows.h>
 #include "boxcall.h"
+#include "vehicle_part.h"
 
-int sudutLengan = 0;
-int sudutCiduk = 0;
+Vehicle VV;
+int sudutLengan = VV.getLenganCiduk();
+int sudutCiduk = VV.getSudutCiduk();
 
 void ciduk_engsel(int z = 0) {
 	glTranslated(0, 0, z);
@@ -45,8 +47,6 @@ void ciduk() {
 		glEnd();
 		zzz -= 120;
 	}
-	
-	
 }
 
 void lengan_cidukExtender() {
@@ -69,7 +69,6 @@ void lengan_cidukExtender() {
 	ciduk();
 	glRotated(-sudutCiduk, 0, 0, 1);
 	glTranslated(124, 0, 0);
-
 }
 
 void lengan_ciduk() {

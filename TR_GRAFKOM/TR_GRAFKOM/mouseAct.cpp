@@ -37,7 +37,7 @@ void lightOn() {
     glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientLight);
 
     GLfloat lightColor[] = { 1.0f, 0.9f, 0.8f, 1.0f };
-    GLfloat lightPos[] = {-500, 250, 500, 1};
+    GLfloat lightPos[] = {-800, 850, 1000, 1};
     glLightfv(GL_LIGHT0, GL_DIFFUSE, lightColor);
     glLightfv(GL_LIGHT0, GL_POSITION, lightPos);
 }
