@@ -106,6 +106,7 @@ void batang(int jari2, int tinggi, int x_tengah, int y_tengah, int z_tengah) {
 }
 
 void pohon(float rb = 20,float tb = 300,float xp = 600,float yp = -40,float zp = 600) {
+	Warna(84, 45, 9);
 	batang(rb, tb, xp, yp, zp);
 	Warna(0, 150);
 	kerucut(rb * 5, tb / 3, xp, yp + tb / 4, zp);
@@ -210,6 +211,14 @@ void latarTempat() {
 	Warna();
 	box_sides(10, 10, x1 - 4, y1+50, -5+ z1 - lebar1 / 2);
 	
+	Warna(60, 60, 60);
+	alat_pasir();
+	kayu2();
+
+
+	pohon();
+	pohon(20, 300, 600, -40, 800);
+
 	//kursi
 	Warna(162,60,30);
 	kubus(5, 35, 5, 780, -40, 350);
@@ -218,10 +227,5 @@ void latarTempat() {
 	kubus(5, 35, 5, 750, -40, 320);
 	kubus(32, 5, -32, 750, -10, 319);
 
-	pohon();
-	pohon(20, 300, 600, -40, 800);
-
-	//sing koyo nak ning tambang pasir
-	alat_pasir();
-	kayu2();
+	
 }
